@@ -133,19 +133,13 @@ const CustomNavbar = ({ nameClass }) => {
             </Nav.Link>
             <Nav.Link
               href="#courses"
-              style={{ color: (!(newWidth > 992)) ?  '' : `${nameClass}` }}
-              className="mx-3 menu-item-color"
+              className={router.pathname === "/about" ? ('mx-3 menu-color') : ' mx-3 menu-item-color'}
             >
               {data.title5}
             </Nav.Link>
             <Nav.Link
               href="/about"
-              style={{ color: (!(newWidth > 992)) ?  '' : `${nameClass}` }}
-              className={
-                router.pathname === "/about.html"
-                  ? `mx-3 active-navlink`
-                  : ` mx-3 menu-item-color`
-              }
+              className={router.pathname === "/about" ? ('mx-3 active-navlink menu-color') : ' mx-3 menu-item-color'}
             >
               {data.title6}
             </Nav.Link>
